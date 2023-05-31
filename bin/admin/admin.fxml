@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="admin.admin">
+    <top>
+        <Label text="Welcome to Our Pharmacy App!" styleClass="title" />
+    </top>
+    <center>
+        <Label text="We provide quality healthcare products and services. Explore our app to discover our wide range of offerings." styleClass="message" />
+    </center>
+</BorderPane>

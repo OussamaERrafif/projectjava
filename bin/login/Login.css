@@ -1,0 +1,35 @@
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.login-button {
+    -fx-font-size: 16px;
+    -fx-padding: 10px 20px;
+    -fx-background-color: #4287f5; /* Blue */
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.login-button:hover {
+    -fx-background-color: #1e56cc; /* Darker Blue */
+}
+
+.login-button:pressed {
+    -fx-background-color: #0f2b67; /* Even Darker Blue */
+}
+
+.text-field {
+    -fx-background-color: #f2f2f2; /* Light Gray */
+    -fx-padding: 8px;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
+.text-field:focused {
+    -fx-border-color: #4287f5; /* Blue */
+    -fx-border-width: 2px;
+}
