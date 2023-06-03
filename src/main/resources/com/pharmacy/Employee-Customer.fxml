@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="1140.0" style="-fx-background-color: #ddd;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.CustomerController">
+   <children>
+      <VBox focusTraversable="true" layoutY="-20.0" prefHeight="682.0" prefWidth="262.0" spacing="5.0" style="-fx-background-color: #E0EDC6;">
+         <children>
+            <Pane prefHeight="328.0" prefWidth="262.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="54.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/medicine-logo-png-20.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="84.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER">
+                     <font>
+                        <Font name="Dubai Regular" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="profileName" layoutX="87.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" text="username">
+                     <font>
+                        <Font name="Corbel Light" size="26.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="31.0" layoutY="291.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+            <Button cache="true" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#sellMedPage" prefHeight="42.0" prefWidth="311.0" text="Sell Medicine">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="311.0" text="Customer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <InnerShadow height="25.16" radius="10.92" width="20.52">
+                     <color>
+                        <Color green="0.6666666865348816" blue="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Button cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#empListMedicinePage" prefHeight="42.0" prefWidth="311.0" text="Medicine">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="button" cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="389.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#empTransactionPage" prefHeight="42.0" prefWidth="311.0" text="Transaction">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutY="662.0" prefHeight="170.0" prefWidth="262.0" style="-fx-background-color: #E0EDC6;">
+         <children>
+            <Button layoutX="80.0" layoutY="62.0" mnemonicParsing="false" onAction="#loginPage" prefHeight="44.0" prefWidth="103.0" text="Log Out">
+               <font>
+                  <Font name="Dubai Light" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="273.0" layoutY="14.0" prefHeight="809.0" prefWidth="842.0" style="-fx-background-color: #fff;">
+         <children>
+            <Text layoutX="328.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Customers">
+               <font>
+                  <Font name="Dubai Light" size="28.0" />
+               </font>
+            </Text>
+            <TableView fx:id="customerTable" layoutY="137.0" prefHeight="672.0" prefWidth="853.0">
+               <columns>
+                  <TableColumn fx:id="nameColumn" prefWidth="110.0" text="Full Name" />
+                  <TableColumn fx:id="emailColumn" prefWidth="141.0" text="E-mail" visible="false" />
+                  <TableColumn fx:id="sexColumn" prefWidth="59.0" text="Sex" visible="false" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="159.0" text="Phone Number" />
+                  <TableColumn fx:id="presciptionColumn" prefWidth="159.0" text="Prescription" />
+                  <TableColumn fx:id="docNameColumn" prefWidth="95.0" text="Doctors Name" visible="false" />
+                  <TableColumn fx:id="hospNameColumn" prefWidth="129.0" text="Hospital Name" visible="false" />
+               </columns>
+            </TableView>
+            <Separator layoutX="-1.0" layoutY="60.0" prefHeight="3.0" prefWidth="853.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

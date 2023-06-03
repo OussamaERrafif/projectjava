@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="828.0" prefWidth="1562.0" style="-fx-background-color: #ddd;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterface.DashboardController">
+   <children>
+      <VBox focusTraversable="true" layoutY="-20.0" prefHeight="682.0" prefWidth="262.0" spacing="5.0" style="-fx-background-color: #E0EDC6;">
+         <children>
+            <Pane prefHeight="328.0" prefWidth="262.0" style="-fx-background-color: #E0EDC6;">
+               <children>
+                  <Text fill="WHITE" layoutX="77.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome " textAlignment="CENTER">
+                     <font>
+                        <Font name="Dubai Regular" size="29.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="profileName" layoutX="79.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: center;" text="username">
+                     <font>
+                        <Font name="Corbel Light" size="26.0" />
+                     </font>
+                  </Text>
+                  <Separator layoutX="31.0" layoutY="291.0" prefWidth="200.0" />
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/medicine-logo-png-20.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button cache="true" contentDisplay="TOP" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="42.0" prefWidth="311.0" text="Dashboard">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <effect>
+                  <InnerShadow>
+                     <color>
+                        <Color green="0.6666666865348816" blue="1.0" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+            </Button>
+            <Button cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#customerPage" prefHeight="42.0" prefWidth="311.0" text="Customer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="505.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#listMedicinePage" prefHeight="42.0" prefWidth="311.0" text="Medicine">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="button" cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="215.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#employePage" prefHeight="42.0" prefWidth="311.0" text="Employee">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="343.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#storePage" prefHeight="42.0" prefWidth="311.0" text="Supplier">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button cache="true" contentDisplay="TOP" layoutX="10.0" layoutY="389.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#transactionPage" prefHeight="42.0" prefWidth="311.0" text="Transaction">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutY="662.0" prefHeight="170.0" prefWidth="262.0" style="-fx-background-color: #E0EDC6;">
+         <children>
+            <Button layoutX="80.0" layoutY="62.0" mnemonicParsing="false" onAction="#loginPage" prefHeight="44.0" prefWidth="103.0" text="Log Out">
+               <font>
+                  <Font name="Dubai Light" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="266.0" prefHeight="828.0" prefWidth="1296.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="266.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutX="56.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #689D71;">
+               <children>
+                  <Text fill="#dfdfe1" layoutX="25.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Medicine">
+                     <font>
+                        <Font name="Dubai Medium" size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="totalMedicine" layoutX="2.0" layoutY="43.0" prefHeight="64.0" prefWidth="200.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Medium" size="36.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="320.0" layoutY="437.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #689D71;">
+               <children>
+                  <Text fill="#dfdfe1" layoutX="43.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Sales" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Dubai Medium" size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="totalSale" layoutX="-6.0" layoutY="49.0" prefHeight="64.0" prefWidth="200.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Medium" size="36.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="590.0" layoutY="437.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #689D71;">
+               <children>
+                  <Text fill="#dfdfe1" layoutX="14.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Transactions" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Dubai Medium" size="22.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="totalTransaction" layoutX="3.0" layoutY="54.0" prefHeight="64.0" prefWidth="200.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Medium" size="36.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+            <AnchorPane layoutX="320.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #689D71;">
+               <children>
+                  <Text fill="#dfdfe1" layoutX="19.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Customer">
+                     <font>
+                        <Font name="Dubai Medium" size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="totalCustomer" layoutX="-2.0" layoutY="45.0" prefHeight="64.0" prefWidth="200.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Medium" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="590.0" layoutY="157.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #689D71;">
+               <children>
+                  <Text fill="#dfdfe1" layoutX="19.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Employee">
+                     <font>
+                        <Font name="Dubai Medium" size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="totalEmployee" layoutY="42.0" prefHeight="64.0" prefWidth="200.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Medium" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="56.0" layoutY="437.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #689D71;">
+               <children>
+                  <Text fill="#dfdfe1" layoutX="21.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Suppliers" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Dubai Medium" size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="totalSuppliers" layoutX="8.0" layoutY="46.0" prefHeight="64.0" prefWidth="200.0" style="-fx-alignment: center;" text="0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="Dubai Medium" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Text layoutX="325.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
+               <font>
+                  <Font name="Georgia" size="39.0" />
+               </font>
+            </Text>
+            <Separator layoutX="-2.0" layoutY="65.0" prefHeight="15.0" prefWidth="874.0" />
+            <TabPane layoutX="872.0" layoutY="-1.0" prefHeight="828.0" prefWidth="424.0" style="-fx-background-color: #fff;" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Create Admin">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="userName" layoutX="103.0" layoutY="58.0" prefHeight="37.0" prefWidth="218.0" promptText="User Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="fullName" layoutX="103.0" layoutY="107.0" prefHeight="37.0" prefWidth="218.0" promptText="Full Name">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <TextField fx:id="email" layoutX="103.0" layoutY="162.0" prefHeight="37.0" prefWidth="218.0" promptText="E-mail">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </TextField>
+                              <PasswordField fx:id="password" layoutX="103.0" layoutY="212.0" prefHeight="37.0" prefWidth="218.0" promptText="Password">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </PasswordField>
+                              <Button layoutX="149.0" layoutY="280.0" mnemonicParsing="false" onAction="#addAdminButton" prefHeight="37.0" prefWidth="127.0" text="Add Admin">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="List of Admins">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="adminTable" layoutX="-3.0" layoutY="56.0" prefHeight="241.0" prefWidth="424.0">
+                                <columns>
+                                  <TableColumn fx:id="usrNameColumn" prefWidth="109.0" text="User Name" />
+                                    <TableColumn fx:id="emailColumn" prefWidth="162.0" text="E-mail" />
+                                    <TableColumn fx:id="passColumn" prefWidth="152.0" text="Password" />
+                                </columns>
+                              </TableView>
+                              <Button layoutX="284.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteAdminButton" prefHeight="26.0" prefWidth="115.0" text="Delete Admin">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Pane>
+   </children>
+</AnchorPane>
